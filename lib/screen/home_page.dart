@@ -2,6 +2,7 @@ import 'package:api/screen/get_list_data.dart';
 import 'package:api/screen/get_photo_list.dart';
 import 'package:api/screen/get_user_list_data.dart';
 import 'package:api/screen/get_user_without_model.dart';
+import 'package:api/screen/post_data_screen.dart';
 import 'package:api/screen/product_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -165,10 +166,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   Expanded(
                       child: InkWell(
                         onTap: (){
-                          // Navigator.push(context,
-                          //     MaterialPageRoute(builder: (context){
-                          //       return const GetUserWithoutModel();
-                          //     }));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context){
+                                return const PostData();
+                              }));
                         },
                         child: Container(
                           padding: const EdgeInsets.all(15),
@@ -177,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: Colors.black54
                           ),
                           child: const Center(
-                            child: Text("" ,style: TextStyle(
+                            child: Text("Post Data" ,style: TextStyle(
                               color: Colors.white,
                               fontSize: 15,
                             ),),
