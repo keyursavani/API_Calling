@@ -1,3 +1,4 @@
+import 'package:api/screen/dropdown_list_screen.dart';
 import 'package:api/screen/get_list_data.dart';
 import 'package:api/screen/get_photo_list.dart';
 import 'package:api/screen/get_user_list_data.dart';
@@ -179,6 +180,60 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           child: const Center(
                             child: Text("Post Data" ,style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                            ),),
+                          ),
+                        ),
+                      )
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20,),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context){
+                                return  const DropDownListScreen();
+                              }));
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(15),
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(12)),
+                              color: Colors.black54
+                          ),
+                          child: const Center(
+                            child: Text("Drop Down List" ,style: TextStyle(
+                              color: Colors.white,
+                              fontSize:15 ,
+                            ),),
+                          ),
+                        ),
+                      )
+                  ),
+                  const SizedBox(width: 10,),
+                  Expanded(
+                      child: InkWell(
+                        onTap: (){
+                          // Navigator.push(context,
+                          //     MaterialPageRoute(builder: (context){
+                          //       return const PostData();
+                          //     }));
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(15),
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(12)),
+                              color: Colors.black54
+                          ),
+                          child: const Center(
+                            child: Text("" ,style: TextStyle(
                               color: Colors.white,
                               fontSize: 15,
                             ),),
