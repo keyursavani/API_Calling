@@ -5,6 +5,7 @@ import 'package:api/screen/get_user_list_data.dart';
 import 'package:api/screen/get_user_without_model.dart';
 import 'package:api/screen/post_data_screen.dart';
 import 'package:api/screen/product_screen.dart';
+import 'package:api/screen/product_screen_two.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -155,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: Colors.black54
                           ),
                           child: const Center(
-                            child: Text("Product Data" ,style: TextStyle(
+                            child: Text("Product scrren" ,style: TextStyle(
                               color: Colors.white,
                               fontSize:15 ,
                             ),),
@@ -221,10 +222,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   Expanded(
                       child: InkWell(
                         onTap: (){
-                          // Navigator.push(context,
-                          //     MaterialPageRoute(builder: (context){
-                          //       return const PostData();
-                          //     }));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context){
+                                return const ProductScreenTwo();
+                              }));
                         },
                         child: Container(
                           padding: const EdgeInsets.all(15),
@@ -233,7 +234,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: Colors.black54
                           ),
                           child: const Center(
-                            child: Text("" ,style: TextStyle(
+                            child: Text("Product Screen Two" ,style: TextStyle(
                               color: Colors.white,
                               fontSize: 15,
                             ),),
